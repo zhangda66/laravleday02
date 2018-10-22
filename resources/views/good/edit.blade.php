@@ -6,7 +6,7 @@
 
         <a href="javascript:history.go(-1);" class="btn btn-info">返回</a>
 
-        <form class="form-horizontal" method="post" action="">
+        <form class="form-horizontal" method="post" action="" enctype="multipart/form-data">
             {!! csrf_field() !!}
             <div class="form-group">
                 <label for="username" class="col-sm-2 control-label">商品名称</label>
@@ -27,9 +27,16 @@
                 </div>
             </div>
             <div class="form-group">
+                <label  class="col-sm-2 control-label">图像</label>
+                <div class="col-sm-10">
+                    <input type="file" class="form-control" name="img">
+                    <img src="/{{$good->logo}}" alt="">
+                </div>
+            </div>
+            <div class="form-group">
                 <label for="username" class="col-sm-2 control-label">商品介绍</label>
                 <div class="col-sm-10">
-                    <textarea name="intro"cols="60" rows="6" placeholder="商品介绍">{{$good->intro}}</textarea>
+                    <textarea name="intro"cols="60" rows="2" placeholder="商品介绍">{{$good->intro}}</textarea>
                 </div>
             </div>
             <div class="form-group">

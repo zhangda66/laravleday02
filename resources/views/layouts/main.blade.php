@@ -27,7 +27,7 @@
     @yield("content")
 
     {{--引入尾部--}}
-    @include("layouts._footer")
+    {{--@include("layouts._footer")--}}
 
 
 </div>

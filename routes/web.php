@@ -41,3 +41,11 @@ Route::any('/good/edit/{id}', "GoodController@edit")->name("good.edit");
 Route::any('/good/del/{id}', "GoodController@del")->name("good.del");
 //浏览次数
 Route::any('/good/gd/{id}', "GoodController@gd")->name("good.gd");
+
+
+
+//用户路由
+Route::get('/user/index', "UserController@index")->name("user.index");
+Route::any('/user/add', "UserController@add")->name("user.add");
+Route::any('/user/edit/{id}', "UserController@edit")->name("user.edit");
+Route::any('/user/del/{id}', "UserController@del")->name("user.del");
